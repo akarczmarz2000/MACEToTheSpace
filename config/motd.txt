@@ -1,5 +1,5 @@
 <!-- Most valid html will work in here, but you have to use URL links for images. -->
 
-<h1>Welcome to Space Station 13!</h1>
+<h1>Shift Assignment: Kilo-Watt Station</h1>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<i>Task: Standard operations with in a station powered by the ASA, testing it's power capacity and developing new technologies for NanoTresen. You are developing the future stations. Keep up the good work!</i>
