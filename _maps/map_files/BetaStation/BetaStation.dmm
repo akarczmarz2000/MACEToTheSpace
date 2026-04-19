@@ -4,7 +4,11 @@
 /area/space)
 "aac" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/full,
+/obj/machinery/power/rtg/advanced{
+	name = "Aperionic Static Assimulator";
+	desc = "Property of NanoTrasen on loan to Kilo-Watt Station. It's making some strange sounds, you feel quite disturbed being close to it.";
+	power_gen = 100000
+	},
 /turf/open/floor/circuit/green,
 /area/station/ai/satellite/chamber)
 "aak" = (
@@ -2906,7 +2910,6 @@
 /obj/structure/table,
 /obj/machinery/light/small/directional/west,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/medical/gauze,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aUW" = (
@@ -2976,15 +2979,11 @@
 /turf/open/floor/iron,
 /area/station/service/janitor)
 "aVH" = (
-/obj/structure/bed{
-	dir = 4
-	},
-/obj/item/bedsheet/captain{
-	dir = 4
-	},
-/obj/effect/landmark/start/captain,
 /obj/structure/sign/poster/contraband/random/directional/north,
 /obj/item/radio/intercom/directional/west,
+/obj/structure/cable,
+/obj/structure/bed/double,
+/obj/item/bedsheet/captain/double,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/captain/private)
 "aVI" = (
@@ -12201,9 +12200,6 @@
 /obj/item/stack/medical/mesh{
 	pixel_x = -4;
 	pixel_y = 3
-	},
-/obj/item/stack/medical/gauze{
-	pixel_x = 8
 	},
 /obj/item/reagent_containers/chem_pack{
 	pixel_x = 10;
@@ -24344,6 +24340,13 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
+"hTq" = (
+/obj/machinery/door/airlock/command{
+	name = "Captain's Tactical Relocation"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/command/captain,
+/turf/open/floor/iron/dark,
+/area/station/ai/upload/chamber)
 "hTz" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
@@ -32150,7 +32153,6 @@
 /area/station/security/evidence)
 "kvo" = (
 /obj/structure/table,
-/obj/machinery/firealarm/directional/west,
 /obj/item/ai_module/reset{
 	pixel_x = 2;
 	pixel_y = 3
@@ -32160,6 +32162,10 @@
 	dir = 8
 	},
 /obj/item/ai_module/supplied/freeform,
+/obj/machinery/turretid{
+	name = "AI Upload Turret Control";
+	pixel_x = -30
+	},
 /turf/open/floor/engine,
 /area/station/ai/upload/chamber)
 "kvJ" = (
@@ -37896,7 +37902,6 @@
 /area/station/cargo/office)
 "mlz" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/neutral{
@@ -53400,11 +53405,10 @@
 /turf/open/floor/glass/reinforced,
 /area/station/service/chapel)
 "rxt" = (
-/obj/structure/table/wood,
-/obj/item/storage/lockbox/medal,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain)
 "rxu" = (
@@ -55165,6 +55169,8 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/north,
+/obj/effect/landmark/start/captain,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/captain/private)
 "sbB" = (
@@ -58436,6 +58442,9 @@
 	luminosity = 2
 	},
 /area/station/command/vault)
+"taN" = (
+/turf/open/space/basic,
+/area/station/ai/satellite/chamber)
 "taU" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -63613,7 +63622,6 @@
 /area/station/maintenance/port/fore)
 "uIs" = (
 /obj/machinery/turretid{
-	control_area = "/area/station/ai_monitored/turret_protected/aisat_interior";
 	name = "Antechamber Turret Control";
 	pixel_y = 28;
 	req_access = list("minisat")
@@ -64336,7 +64344,6 @@
 /area/space/nearstation)
 "uWS" = (
 /obj/structure/rack,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/bruise_pack,
 /obj/effect/turf_decal/bot,
 /obj/machinery/light/small/directional/north,
@@ -64542,6 +64549,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/item/storage/lockbox/medal,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain/private)
 "uZR" = (
@@ -65599,12 +65607,6 @@
 /turf/open/floor/grass,
 /area/station/service/hydroponics/garden)
 "vrf" = (
-/obj/structure/table/wood,
-/obj/item/storage/fancy/cigarettes/cigars/havana{
-	pixel_y = 5
-	},
-/obj/machinery/light/directional/east,
-/obj/item/lighter,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
@@ -68411,10 +68413,6 @@
 /turf/open/floor/iron,
 /area/station/command/teleporter)
 "wfD" = (
-/obj/machinery/flasher/directional/west{
-	id = "AI";
-	name = "Meatbag Pacifier"
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -104908,7 +104906,7 @@ aeu
 aeu
 aeu
 aeu
-asZ
+taN
 aAg
 aAg
 asZ
@@ -108583,8 +108581,8 @@ wFl
 rcM
 lpt
 rcM
-rcM
-rcM
+arl
+hTq
 lpt
 jlh
 owG

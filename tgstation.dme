@@ -2240,6 +2240,7 @@
 #include "code\game\machinery\buttons.dm"
 #include "code\game\machinery\cell_charger.dm"
 #include "code\game\machinery\constructable_frame.dm"
+#include "code\game\machinery\cryo-simple.dm"
 #include "code\game\machinery\dance_machine.dm"
 #include "code\game\machinery\defibrillator_mount.dm"
 #include "code\game\machinery\deployable.dm"
